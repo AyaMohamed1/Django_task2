@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      {%block Title%}
+      parent Title
+      {%endblock%}
+    </title>
+</head>
+<body>
+     <Ul>
+       <li>
+         <a href="{% url 'hrhome' %}"> HR home</a>
+       </li>
+       <li>
+         <a href="{% url 'register' %}"> Register </a>
+       </li>
+       <li>
+        <a href="{% url 'login' %}"> Login </a>
+      </li>
+      <li>
+        <a href="{% url 'logout' %}"> Logout </a>
+      </li>
+     </Ul>
+{%block Content%}
+parent content
+{%endblock%}
+</body>
+</html>

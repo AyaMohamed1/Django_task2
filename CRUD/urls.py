@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from hr.views import hrhome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('student/', include('student_register.urls'))
+    path('student/', include('student_register.urls')),
+    # path('', parentpage, name='phome'),
+    path('myapi/', include('myapi.urls')),
 ]

@@ -1,7 +1,12 @@
 from multiprocessing import context
 from django.shortcuts import redirect, render
 from .forms import StudentForm
-from .models import Student
+from .models import Student, track
+from django.views.generic import ListView
+
+class Tracklist(ListView):
+    model = track
+
 # Create your views here.
 def student_list(request):
     context = {'student_list': Student.objects.all()}
